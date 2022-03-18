@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Entrega1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [r"C:\Users\AMD A10\Desktop\PythonEntrega1\Indice\templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
