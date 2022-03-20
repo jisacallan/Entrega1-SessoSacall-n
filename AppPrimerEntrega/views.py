@@ -9,3 +9,6 @@ def nuevo_paciente(request):
     paciente1 =  Paciente(nombre='Juan', apellido='Martinez', DNI=DNI, patologia='Alzheimer')
     paciente1.save()
     return HttpResponse(f"Se muestra la info de paciente {paciente1.nombre} {paciente1.apellido}")
+
+def entrega_formulario(request):
+    return render(request, 'AppPrimerEntrega/entrega_formulario.html', {})
