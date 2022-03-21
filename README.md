@@ -10,6 +10,24 @@ Se explicará en las siguientes secciones las funcionalidades como también los 
 
 **Aviso de problemas:** Por cualquier urgencia, puede contactarse al mail del creador del proyecto jisacallan@gmail.com
 
+## Utilización del programa
+
+En primera instancia se debe correr el programa. Aquí se utilizó el código _py manage.py runserver_. Luego, cuando se abra el link, aparecerá información de base sobre
+el funcionamiento del programa y un cartel de bienvenida. Debe tenerse en cuenta que esta pantalla será inicio, la cual volverá a aparecer en la siguiente sección en
+base a las funcionalidades de la barra.
+En tercer lugar, debe seleccionarse alguna de las siguientes alguna de las siguientes funcionalidades en base a lo que se requiera. Esto puede encontrarse en la barra
+de direcciones con los siguientes nombres:
+
+1.	Inicio: esta acción lleva a la página de inicio.
+
+2.	Paciente: aquí se permitirá el ingreso de datos del paciente. Estos constan de 
+
+3.	Especialista: se ingresan los datos del médico especialista en cada sección de la clínica. Los datos a ingresar son
+
+4.	Búsqueda de pacientes: aquí se permite buscar entre los datos ingresados de los pacientes previamente. 
+
+Para finalizar, se dirá que en la última sección se analizará en base a las consignas del trabajo como responde el programa aquí establecido. 
+
 ## Desarrollo del programa
 
 **Primera parte:** En la carpeta _Entrega1_ puede observarse los datos básicos de inicio del proyecto. 
