@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 {% load static %}
-<title>Green Zone 2.0 Template</title>
+<title>Clínica San Martín</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="title" content="Green Zone 2.0 | Template by MLP Design" />
 <meta name="author" content="MLP Design, webmasterneo" />
@@ -15,15 +15,15 @@
 <div id="wrap">
 	<!--Begin Header -->
 	<div id="header">
-		<h1><a href="#" title="Green Zone">Green Zone 2.0</a></h1>
-		<p>Fluid, responsive, CSS only (image-free) version of the classic free template by MLP Design.</p>
+		<h1>Clínica San Martín</h1>
+		<p>Sistema de ingreso de datos para profesionales de la Clínica San Martín y buscador de pacientes</p>
 	</div>
 	<!--End Header -->
 <nav>
 <label for="show-menu" class="responsive">&#9776; Menu</label>
 <input type="checkbox" id="show-menu" role="button">
 		<ul id="menu">
-			<li><a class="current">Home</a></li>
+			<li><a href={% url 'home' %} title="Inicio">Inicio</a></li>
 			<li><a href={% url 'formulario_paciente' %} title="Paciente">Paciente</a></li>
 			<li><a href={% url 'formulario_especialista' %} title="Especialista">Especialista</a></li>
 			<li><a href={% url 'tratamiento' %} title="Tratamiento">Tratamiento</a></li>
@@ -34,9 +34,13 @@
 	{% block bloque_cuerpo %}
 	<div id="content">
 		<div class="post">
-		<h2><a title="H2 Headline with link" href="#">Headline with link</a></h2>
-		<span class="author">Posted by: <a href="http://www.mlpdesign.net/">MLP Design</a> | <a href="#">Date</a> | <a href="#">0 comment(s)</a> | <a href="#">PermaLink</a></span>
-		<p>A paragraph: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed eleifend laoreet magna. Donec auctor libero id massa. Aenean sit amet enim ac urna dictum lobortis. Praesent convallis sapien eu tortor. Phasellus eros tortor, lacinia ut, pellentesque in, venenatis in, elit. Suspendisse potenti. Proin sed pede. Suspendisse elementum, augue et venenatis malesuada, nisl pede commodo eros, id faucibus purus arcu vel risus. Nullam at metus.</p>
+		<h2>¡Bienvenido!</h2>
+		<p>Sea bienvenido a la página inicial de la Clínica San Martín, aquí podrá ingresarse los datos tanto del 
+			paciente para tener registrado, de profesional que trabaja dentro de la clínica como también el registro
+			de inicios de tratamientos. A su vez, podrá buscarse a los pacientes en la sección "Buscador de pacientes",
+			en caso de que sus datos sean necesarios. 
+			¡Gracias por siempre contar con nosotros!
+		</p>
 		</div>
 		<div class="post">
 		</ul>
@@ -49,7 +53,7 @@
 	<!--End Content -->
 	<!--Begin Footer -->
 	<div id="footer">
-	<div class="notice">&copy; Copyright <a title="Your Name and Link" href="#">Your Name</a>. All rights reserved.</div>
+	<div class="notice">&copy; Copyright <a title="Your Name and Link" href="#">Clínica San Martín</a>. All rights reserved.</div>
 	</div>
 	<!--End Footer -->
 </div>

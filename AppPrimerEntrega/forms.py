@@ -16,7 +16,7 @@ class FormularioEspecialista(forms.Form):
     
 class FormularioTratamiento(forms.Form):
     fecha_inicio = forms.DateTimeField()
-    cura = forms.BooleanField()
+    cura = forms.BooleanField(required=False)
     
 class BusquedaPaciente(forms.Form):
     partial_paciente = forms.CharField(label='Buscador de pacientes' ,max_length=20)
