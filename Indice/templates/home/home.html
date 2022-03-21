@@ -24,12 +24,13 @@
 <input type="checkbox" id="show-menu" role="button">
 		<ul id="menu">
 			<li><a class="current">Home</a></li>
-			<li><a href={% url 'entrega_formulario' %} title="About">Prueba</a></li>
-			<li><a href="#" title="Contact">Contact</a></li>
-			<li><a href="#" title="Sitemap">Sitemap</a></li>
+			<li><a href={% url 'formulario_paciente' %} title="Paciente">Paciente</a></li>
+			<li><a href={% url 'formulario_especialista' %} title="Especialista">Especialista</a></li>
+			<li><a href={% url 'tratamiento' %} title="Tratamiento">Tratamiento</a></li>
 		</ul>
 </nav>
 	<!-- Begin Content -->
+	{% block bloque_cuerpo %}
 	<div id="content">
 		<div class="post">
 		<h2><a title="H2 Headline with link" href="#">Headline with link</a></h2>
@@ -41,7 +42,7 @@
 		</div>
 	</div>
 
-	{% block bloque_cuerpo %}
+	
 	{% endblock bloque_cuerpo %}
 
 	<!--End Content -->

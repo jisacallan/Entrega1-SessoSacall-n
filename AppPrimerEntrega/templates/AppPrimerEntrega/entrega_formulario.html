@@ -2,9 +2,14 @@
     
 {% block bloque_cuerpo %}
 
-    Prueba
+    <form action={% url 'entrega_formulario' %} method="post">
+        {% csrf_token %}
+        Nombre: <input type="text" name="nombre">
+        Apellido: <input type="text" name="apellido">
+        DNI: <input type="number" name="DNI">
+        Patología: <input type="text" name="patologia">
 
-    00:14:04 27605 - 14/03 - Playground Intermedio (parte 3)- Pantalla compartida con vista del orador
-    00:20:02 27605 - 09/03 - Playground Intermedio (parte 2)- Pantalla compartida con vista del orador
+        <input type="submit" placeholder="Enviar">
+    </form>
 
 {% endblock bloque_cuerpo %}
