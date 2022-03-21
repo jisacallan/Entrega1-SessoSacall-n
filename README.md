@@ -1,6 +1,6 @@
 # Entrega1-SessoSacallán
 
-Se explicará en las siguientes secciones las funcionalidades como también los diferentes propósitos del programa. Los lenguajes utilizados aquí fueron Python, HTML y CSS
+Se explicará en las siguientes secciones las funcionalidades como también los diferentes propósitos del programa. Los lenguajes utilizados aquí fueron Python, HTML y CSS.
 
 ## Información básica
 
