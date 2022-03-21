@@ -1,3 +1,5 @@
+from email.policy import default
+from tokenize import blank_re
 from django import forms
 
 class FormularioPaciente(forms.Form):
@@ -15,3 +17,6 @@ class FormularioEspecialista(forms.Form):
 class FormularioTratamiento(forms.Form):
     fecha_inicio = forms.DateTimeField()
     cura = forms.BooleanField()
+    
+class BusquedaPaciente(forms.Form):
+    partial_paciente = forms.CharField(label='Buscador de pacientes' ,max_length=20)

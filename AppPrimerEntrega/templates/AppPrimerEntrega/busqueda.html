@@ -1,0 +1,29 @@
+{% extends 'home/home.html' %}    
+    
+{% block bloque_cuerpo %}
+
+    <form action={% url 'busqueda_paciente' %} method="get">
+    
+        {% csrf_token %}
+        
+            <table>
+
+                {{ buscador.as_table }}
+
+            </table>
+
+        <input type="submit" placeholder="Enviar">
+    </form>
+
+    {% if dato %}
+        Se buscó por el dato {{dato}}
+        {% for paciente in pacientes_buscados %}
+            <li>
+                {{paciente}}
+            </li>
+        {% endfor %}
+    {% else %}        
+        No hay dato con esa descripción            
+    {% endif %}
+
+{% endblock bloque_cuerpo %}

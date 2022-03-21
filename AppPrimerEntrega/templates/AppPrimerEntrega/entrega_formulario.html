@@ -2,12 +2,15 @@
     
 {% block bloque_cuerpo %}
 
-    <form action={% url 'entrega_formulario' %} method="post">
+    <form action="" method="post">
+    
         {% csrf_token %}
-        Nombre: <input type="text" name="nombre">
-        Apellido: <input type="text" name="apellido">
-        DNI: <input type="number" name="DNI">
-        Patología: <input type="text" name="patologia">
+        
+            <table>
+
+                {{ formulario.as_table }}
+
+            </table>
 
         <input type="submit" placeholder="Enviar">
     </form>
