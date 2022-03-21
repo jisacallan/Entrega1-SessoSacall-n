@@ -1,5 +1,3 @@
-from email.policy import default
-from tokenize import blank_re
 from django import forms
 
 class FormularioPaciente(forms.Form):
