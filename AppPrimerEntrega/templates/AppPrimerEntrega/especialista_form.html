@@ -1,0 +1,12 @@
+{% extends 'home/home.html' %}    
+    
+{% block bloque_cuerpo %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.media}}        
+        {{ form.as_p }}
+        <input type="submit" placeholder="Enviar">
+    </form>
+
+{% endblock bloque_cuerpo %}

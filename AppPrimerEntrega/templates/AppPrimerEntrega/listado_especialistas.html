@@ -1,0 +1,18 @@
+{% extends 'home/home.html' %}
+
+{% block HeaderBlock %}
+    {% comment %} <a href={% url 'especialistas_detalle' %}>Crear especialista</a> {% endcomment %}
+{% endblock HeaderBlock %}
+    
+{% block bloque_cuerpo %}
+    
+    {% for especialista in object_list %}
+        <li>
+            {{especialista}}
+            <a href={% url 'especialistas_detalle' especialista.id %}>Ver más...</a>
+            <a href={% url 'especialistas_editar' especialista.id %}>Editar</a>
+            <a href={% url 'especialistas_borrar' especialista.id %}>Borrar</a>
+        </li>
+    {% endfor %}
+
+{% endblock bloque_cuerpo %}

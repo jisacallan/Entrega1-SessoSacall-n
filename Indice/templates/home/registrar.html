@@ -1,0 +1,14 @@
+{% extends 'home/home.html' %}
+
+{% block bloque_cuerpo %}
+
+    {% if msj %}
+        {{msj}}
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Registrarse</button>
+    </form>
+{% endblock bloque_cuerpo %}

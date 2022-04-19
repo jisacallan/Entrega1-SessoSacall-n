@@ -24,17 +24,39 @@
 <input type="checkbox" id="show-menu" role="button">
 		<ul id="menu">
 			<li><a href={% url 'home' %} title="Inicio">Inicio</a></li>
-			<li><a href={% url 'formulario_paciente' %} title="Paciente">Paciente</a></li>
-			<li><a href={% url 'formulario_especialista' %} title="Especialista">Especialista</a></li>
-			<li><a href={% url 'tratamiento' %} title="Tratamiento">Tratamiento</a></li>
+			{% comment %} <li><a href={% url 'formulario_paciente' %} title="Paciente">Paciente</a></li> {% endcomment %}
+			<li><a href={% url 'listado_paciente' %} title="Listado de pacientes">Listado de pacientes</a></li>
+			{% comment %} <li><a href={% url 'crear_paciente' %} title="Crear paciente">Crear paciente</a></li> {% endcomment %}
 			<li><a href={% url 'busqueda_paciente' %} title="Busqueda de pacientes">Busqueda de pacientes</a></li>
+			<li><a href={% url 'formulario_especialista' %} title="Especialista">Especialista</a></li>
+			<li><a href={% url 'especialistas_listado' %} title="Listado de especialistas">Listado de especialistas</a></li>
+			<li><a href={% url 'tratamiento' %} title="Tratamiento">Tratamiento</a></li>
+			{% if request.user.is_authenticated %}
+				<li><a href={% url 'logout' %} title="Logout">Salida</a></li>
+				<li><a href={% url 'editar' %} title="Editar">
+					<img src="{{user_avatar_url}}" alt="Editar" height='45'>
+				</a></li>
+			{% else %}
+				<li><a href={% url 'login' %} title="Login">Ingresar</a></li>
+				<li><a href={% url 'registrar' %} title="Registrar">Registrarse</a></li>
+			{% endif %}
 		</ul>
+
+	{% block HeaderBlock %}
+	{% endblock HeaderBlock %}
+
 </nav>
 	<!-- Begin Content -->
 	{% block bloque_cuerpo %}
 	<div id="content">
 		<div class="post">
-		<h2>¡Bienvenido!</h2>
+		<h2>
+			{% if msj %}
+				{{msj}}
+			{% else %}
+				¡Bienvenido!
+			{% endif %}
+		</h2>
 		<p>Sea bienvenido a la página inicial de la Clínica San Martín, aquí podrá ingresarse los datos tanto del 
 			paciente para tener registrado, de profesional que trabaja dentro de la clínica como también el registro
 			de inicios de tratamientos. A su vez, podrá buscarse a los pacientes en la sección "Buscador de pacientes",

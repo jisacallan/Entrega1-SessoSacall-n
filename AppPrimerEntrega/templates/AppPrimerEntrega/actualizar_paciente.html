@@ -1,0 +1,18 @@
+{% extends 'home/home.html' %}    
+    
+{% block bloque_cuerpo %}
+
+    <form action={% url 'actualizar_paciente' paciente.id %} method="post">
+    
+        {% csrf_token %}
+        
+            <table>
+
+                {{ formulario.as_table }}
+
+            </table>
+
+        <input type="submit" placeholder="Actualizar">
+    </form>
+
+{% endblock bloque_cuerpo %}

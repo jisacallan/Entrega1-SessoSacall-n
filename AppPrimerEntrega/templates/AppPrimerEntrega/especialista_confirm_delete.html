@@ -1,0 +1,14 @@
+{% extends 'home/home.html' %}
+
+{% block HeaderBlock %}
+{% endblock HeaderBlock %}
+    
+{% block bloque_cuerpo %}
+    
+    <form method="post">
+        {% csrf_token %}
+        ¿Confirma el borrado de este elemento?
+        <input type="submit" placeholder="Confirmar">
+    </form>
+
+{% endblock bloque_cuerpo %}

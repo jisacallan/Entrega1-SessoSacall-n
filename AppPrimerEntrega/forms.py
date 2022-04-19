@@ -1,4 +1,5 @@
 from django import forms
+from ckeditor.fields import RichTextFormField
 
 class FormularioPaciente(forms.Form):
     nombre = forms.CharField(max_length=20)
@@ -11,6 +12,7 @@ class FormularioEspecialista(forms.Form):
     apellido = forms.CharField(max_length=20)
     especialidad = forms.CharField(max_length=20)
     matricula = forms.IntegerField()
+    comentarios = RichTextFormField(required=False)
     
 class FormularioTratamiento(forms.Form):
     fecha_inicio = forms.DateTimeField()

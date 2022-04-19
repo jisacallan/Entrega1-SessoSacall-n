@@ -1,0 +1,18 @@
+{% extends 'home/home.html' %}
+
+{% block bloque_cuerpo %}
+
+    <h2>Editar usuario</h2>
+
+    {% if msj %}
+        {{msj}}
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <button>Guardar</button>
+    </form>
+{% endblock bloque_cuerpo %}
